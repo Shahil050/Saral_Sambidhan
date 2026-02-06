@@ -1,8 +1,13 @@
 from langchain.vectorstores import FAISS
 
-vectorstore=FAISS.from_documents(
-    documents=docs,
-    embedding=embeddings
-)
+#creating faiss index
+def create_database_index(documents,embeddings):
+    vectorstore=FAISS.from_documents(
+        documents=documents,
+        embedding=embeddings
+    )
+    return vectorstore
 
-vectorstore.save_local("faiss_index")
+#saving vector embeddings
+def save_faiss_index(vectorstore,path="faiss_index"):
+    vectorstore.save_local(path)
