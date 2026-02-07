@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sambidhan Saral – AI-Powered Fundamental Rights</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar glass">
+    <div class="logo-area">
+      <img src="images/logo.png" class="logo" alt="Logo"/>
+      <span class="brand">Sambidhan <span class="highlight">Saral</span></span>
+    </div>
+    <div class="pdf-area">
+      <a href="#" class="btn-glass" target="_blank">📖 Read PDF</a>
+      <a href="#" class="btn-glass btn-accent" download>⬇ Download</a>
+    </div>
+  </header>
+
+  <section class="banner-container">
+    <div class="banner-overlay"></div>
+    <img src="images/252-4595.jpg" alt="Nepal Landscape Banner" class="banner-img">
+    <div class="banner-content">
+        <h1>Simplified Constitution.</h1>
+        <p>Powered by Artificial Intelligence.</p>
+    </div>
+  </section>
+
+  <section class="hero">
+    <span class="ai-badge"> AI-Enhanced Learning</span>
+    <h2 class="gradient-text">Fundamental Rights of Nepal</h2>
+    <p>Learn your basic rights under the Constitution of Nepal — explained simply, clearly, and instantly.</p>
+  </section>
+
+  <section class="rights-container">
+    <div class="rights-list">
+      <div class="right-item glass-card">
+        <h3>⚖️ Right to Equality</h3>
+        <p>All citizens are equal before the law. No discrimination based on caste, gender, religion, or status.</p>
+      </div>
+      <div class="right-item glass-card">
+        <h3>🗣️ Right to Freedom</h3>
+        <p>Freedom of speech, expression, peaceful assembly, and movement within Nepal.</p>
+      </div>
+      <div class="right-item glass-card">
+        <h3>🏛️ Right to Justice</h3>
+        <p>Every citizen has the right to a fair trial and legal support if treated unfairly.</p>
+      </div>
+      <div class="right-item glass-card">
+        <h3>🚫 Right against Torture</h3>
+        <p>No one can be tortured or treated cruelly. Violators are punishable by law.</p>
+      </div>
+      <div class="right-item glass-card">
+        <h3>🎓 Right to Education</h3>
+        <p>Every citizen has the right to basic education. Free basic education is supported by the state.</p>
+      </div>
+      <div class="right-item glass-card">
+        <h3>ℹ️ Right to Information</h3>
+        <p>Citizens can request information from public bodies regarding government work.</p>
+      </div>
+      <div class="right-item glass-card">
+        <h3>🔒 Right to Privacy</h3>
+        <p>Your personal life, home, and data are protected by law.</p>
+      </div>
+      <div class="right-item glass-card">
+        <h3>🤝 Minority Rights</h3>
+        <p>Special protections provided to women, children, Dalits, disabled persons, and minorities.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-section side-by-side">
+    <figure class="tech-figure">
+      <div class="img-wrapper glow-effect">
+          <img src="images/IMG02.jpg" alt="Nepal Cultural Diversity">
+      </div>
+      <figcaption>
+        <h3>Cultural Sovereignty & Diversity</h3>
+        <p>The Constitution of Nepal 2072 represents a historic transition to a federal secular republic, recognizing the "unity in diversity" of the Nepali identity. By recognizing 142 ethnic groups and 124 mother tongues, the state reflects a vibrant cultural mosaic.</p>
+        <p>This framework protects traditional knowledge systems. This legal shield is vital for the survival of indigenous customs that have existed for centuries, ensuring every community can preserve its unique heritage.</p>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="featured-section side-by-side">
+    <figure class="tech-figure">
+      <div class="img-wrapper glow-effect">
+          <img src="images/mountains.avif" alt="Environmental Rights">
+      </div>
+      <figcaption>
+        <h3>Environmental Rights & Himalayan Legacy</h3>
+        <p>Nepal is a pioneer in "Green Jurisprudence." Article 30 grants every citizen the "Right to a Clean and Healthy Environment." Unlike many nations where this is just a policy goal, in Nepal, it is an enforceable fundamental right.</p>
+        <p>The state is mandated to maintain 40% forest cover and protect biodiversity. By simplifying these articles with AI, we empower activists to use the law as a shield to protect our glaciers and forests for future generations.</p>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="featured-section side-by-side">
+    <figure class="tech-figure">
+      <div class="img-wrapper glow-effect">
+          <img src="images/socialjusice.webp" alt="Social Harmony">
+      </div>
+      <figcaption>
+        <h3>Social Justice & Inclusion</h3>
+        <p>Article 42 focuses on "Proportional Inclusion," ensuring that marginalized groups—including women, Dalits, and Janajatis—have the right to participate in state bodies. This is a deliberate effort to correct historical imbalances.</p>
+        <p>This inclusive approach extends to social security for children, the elderly, and the vulnerable. Sambidhan Saral makes these complex inclusive laws understandable, encouraging citizens to participate in democracy.</p>
+      </figcaption>
+    </figure>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 Sambidhan Saral | AI-Powered Constitutional Platform</p>
+  </footer>
+
+  <div class="chat-trigger-container">
+      <div class="chat-pulse"></div>
+      <div class="chat-btn" onclick="toggleChat()">
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="AI Bot" />
+      </div>
+  </div>
+
+  <div class="chat-box glass" id="chatBox">
+    <div class="chat-header gradient-bg">
+      <span> Ask Sambidhan AI</span>
+      <button onclick="toggleChat()">✖</button>
+    </div>
+    <div class="chat-body">
+        <div class="ai-message">Namaste! I am your AI legal assistant. Paste any article below.</div>
+      <textarea id="userText" placeholder="e.g., Explain Article 17..."></textarea>
+      <button class="send-btn gradient-bg" onclick="sendMessage()">Simplify with AI</button>
+      <div class="chat-response hidden" id="chatResponse">
+          <span class="thinking">AI is thinking...</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
