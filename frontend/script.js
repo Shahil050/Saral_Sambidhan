@@ -18,23 +18,27 @@ async function sendMessage() {
     responseBox.innerHTML = `<div style="color:#666;font-size:0.9rem;">AI is thinking...</div>`;
 
     try {
+        // Use 127.0.0.1 to match your uvicorn default address
         const response = await fetch("http://127.0.0.1:8000/api/explain", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ question: query })
         });
 
+        if (!response.ok) throw new Error("Backend Error");
+
         const data = await response.json();
 
         responseBox.innerHTML = `
-            <div style="font-weight:700;color:var(--primary-red);font-size:0.8rem;">AI EXPLANATION</div>
-            <div>${data.explaination.replace(/\n/g, "<br>")}</div>
+            <div style="font-weight:700;color:red;font-size:0.8rem;">AI EXPLANATION</div>
+            <div>${data.explanation.replace(/\n/g, "<br>")}</div>
         `;
 
         textInput.value = "";
 
     } catch (error) {
-        responseBox.innerHTML = `<b style="color:red;">Backend not running on port 8000</b>`;
+        responseBox.innerHTML = `<b style="color:red;">Backend not reachable</b>`;
+        console.error("Fetch error:", error);
     }
 }
 
